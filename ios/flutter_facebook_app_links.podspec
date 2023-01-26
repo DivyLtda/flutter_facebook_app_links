@@ -15,9 +15,14 @@ Flutter plugin for Facebook App Links SDK
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'FBSDKCoreKit', '~> 15.1'
-  s.swift_version       = '4.0'
-
+  
+  s.static_framework = true
+  s.swift_version       = '5.0'
   s.ios.deployment_target = '11.0'
+  s.dependency 'FBSDKCoreKit', '~> 15.1'
+  
+  # See docs on FBAudienceNetwork
+  # https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/ios/add-sdk/
+  s.dependency 'FBAudienceNetwork', '~> 6.12'
 end
 
